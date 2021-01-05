@@ -1,0 +1,48 @@
+<h1>Twitter</h1>
+<div>
+    <a href="/">
+        <button>
+            Home
+        </button>
+    </a>
+    <a href="/tweet/">
+        <button>
+            Tweet
+        </button>
+    </a>
+    <a href="/user-profile/{{request.user.id}}/">
+        <button>
+            Profile
+        </button>
+    </a>
+    <a href="/notifications/">
+        <button>
+            Notifications
+        </button>
+    </a>
+    <a href="/login/">
+        <button>
+            Login
+        </button>
+    </a>
+    <a href="/signup/">
+        <button>
+            SignUp
+        </button>
+    </a>
+    <a href="/logout/">
+        <button>
+            Logout
+        </button>
+    </a>
+</div>
+<p>Hi, {{request.user.username}} you are viewing {{user}}'s tweet</p>
+<hr>
+<h3>Tweet's Details</h3>
+<hr>
+<h4>Tweet Contents</h4>
+<p><a href="/tweet-details/{{tweet.id}}/">{{tweet.tweet_post}}</a></p>
+<h4>Author</h4>
+<p><a href="/user-profile/{{tweet.tweeter.id}}/">{{tweet.tweeter}}</a></p>
+<h4>Date Created</h4>
+<p>{{tweet.date}}</p>

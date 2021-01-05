@@ -1,0 +1,45 @@
+<h1>Twitter</h1>
+<div>
+    <a href="/">
+        <button>
+            Home
+        </button>
+    </a>
+    <a href="/tweet/">
+        <button>
+            Tweet
+        </button>
+    </a>
+    <a href="/user-profile/{{request.user.id}}/">
+        <button>
+            Profile
+        </button>
+    </a>
+    <a href="/notifications/">
+        <button>
+            Notifications
+        </button>
+    </a>
+    <a href="/login/">
+        <button>
+            Login
+        </button>
+    </a>
+    <a href="/signup/">
+        <button>
+            SignUp
+        </button>
+    </a>
+    <a href="/logout/">
+        <button>
+            Logout
+        </button>
+    </a>
+</div>
+<p>Hi, {{request.user.username}}</p>
+<hr>
+<ul>
+    {% for notification in notify %}
+        <li>{{notification}}</li>
+    {% endfor %}
+</ul>
